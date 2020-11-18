@@ -1,13 +1,16 @@
 from django.db import models
 
+
 class Writer(models.Model):
     name = models.CharField(max_length=200)
     address = models.TextField(null=True)
     phone = models.CharField(max_length=19)
     email = models.EmailField()
 
+
 class Tag(models.Model):
     name = models.CharField(max_length=200)
+
 
 class Post(models.Model):
     title = models.CharField(max_length=200)
@@ -24,5 +27,3 @@ class Post(models.Model):
 #     updated_at = models.DateTimeField(auto_now=True)
 #     created_by = models.ForeignKey(User, on_delete=models.CASCADE, related_name='created_by')
 #     updated_by = models.ForeignKey(User, on_delete=models.CASCADE, related_name='updated_by')
-
-
